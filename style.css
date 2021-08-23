@@ -1,0 +1,162 @@
+/***************GENERAL****************/
+
+:root {
+  --brown: #432818;
+  --yellow: #ffe6a7;
+} /*Defining variables for color palette*/
+
+body {
+  /*Background image centered with gradient background behind it matching left and right edge of image*/
+  background: url("https://images.pexels.com/photos/96380/pexels-photo-96380.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
+      no-repeat center center fixed,
+    linear-gradient(to right, #20201e, #2F2F33);
+
+  /*Defaults set to 0*/
+  margin: 0;
+  padding: 0;
+}
+
+/****************HEADER****************/
+
+header {
+  display: flex;
+  justify-content: center; /*Container centered within header*/
+}
+
+header .wrapper {
+  background-color: var(--brown);
+  background-clip: padding-box;
+  border-radius: 10%;
+  padding: 0.75em 1.5em 0 1.5em;
+  margin: 1em;
+  margin-bottom:1.5em;
+  text-align: center; /*Text centered within container*/
+}
+
+h1,
+h2 {
+  display: inline-flex;
+  color: var(--yellow);
+  font-family: fantasy;
+  font-weight: lighter;
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 0;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 1.5em;
+  font-style: normal;
+}
+
+/****************YOUTUBE VIDEOS****************/
+
+#youtube {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#youtube iframe {
+  width: 25%;
+  min-width: 400px;
+  margin: 3%;
+  opacity: 0.65;
+}
+
+#youtube iframe:hover {
+  opacity: 1;
+}
+
+/***************FOOTER***************/
+
+/***Basic Display Properties of Footer**/
+footer {
+  display:flex;
+  justify-content: center;
+  margin: 2% 5%;
+    
+}
+
+/***Styling Visible Footer Bar***/
+footer .wrapper {
+  
+  /*Color*/
+  background-color: var(--brown);
+  color: var(--yellow);
+  
+ /*Display, margin, padding, etc.*/
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10% 0 10%;
+  width:100%;
+  max-width:1000px;
+
+/*text properties*/
+  font-family: sans-serif;
+  line-height: 1.5;
+}
+
+/***Footer Links***/
+footer a {
+  color: var(--yellow);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/***Styling Each Box In Footer**/
+
+#footerBox1, #footerBox2 {
+  display:block;
+}
+
+#footerBox1 {
+  margin-right:20%;
+}
+
+#footerBox1 p {
+padding-top:.75em;
+  
+}
+
+#footerBox1 ul {
+  list-style-type: circle;
+ }
+
+#footerBox2 {
+  width: 30%;
+  margin-left:20%;
+  text-align: center;
+}
+
+
+
+/*For Mobile Only (833px is when footer starts wrapping)*/
+@media only screen and (max-width: 833px) {
+   
+  footer .wrapper {
+    display:flex-block;
+    margin:auto;
+    justify-content:center;
+  } 
+  
+  #footerBox1, #footerBox2 {
+    display:block;
+    margin:.75em;
+    width:auto;
+  }   
+
+#youtube iframe {
+  min-width: 300px;
+}
+}
